@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.scamguard.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_quickScanFragment"
+            app:destination="@id/quickScanFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_smsScanFragment"
+            app:destination="@id/smsScanFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_qrScanFragment"
+            app:destination="@id/qrScanFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_learnFragment"
+            app:destination="@id/learnFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quickScanFragment"
+        android:name="com.example.scamguard.ui.scan.QuickScanFragment"
+        tools:layout="@layout/fragment_quick_scan" />
+
+    <fragment
+        android:id="@+id/smsScanFragment"
+        android:name="com.example.scamguard.ui.scan.SmsScanFragment"
+        tools:layout="@layout/fragment_sms_scan" />
+
+    <fragment
+        android:id="@+id/qrScanFragment"
+        android:name="com.example.scamguard.ui.scan.QrScanFragment"
+        tools:layout="@layout/fragment_qr_scan" />
+
+    <fragment
+        android:id="@+id/learnFragment"
+        android:name="com.example.scamguard.ui.learn.LearnFragment"
+        tools:layout="@layout/fragment_learn">
+        <action
+            android:id="@+id/action_learnFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.example.scamguard.ui.learn.ArticleDetailFragment"
+        tools:layout="@layout/fragment_article_detail" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="summary"
+            app:argType="string" />
+        <argument
+            android:name="content"
+            app:argType="string" />
+        <argument
+            android:name="iconEmoji"
+            app:argType="string"
+            android:defaultValue="💡" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.scamguard.ui.history.HistoryFragment"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.scamguard.ui.settings.SettingsFragment"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.scamguard.ui.settings.AuthFragment"
+        tools:layout="@layout/fragment_auth" />
+
+</navigation>

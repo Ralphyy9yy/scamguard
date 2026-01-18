@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5561FF</color>
+    <color name="colorSecondary">#7B89FF</color>
+    <color name="gradientStart">#0C0F2B</color>
+    <color name="gradientEnd">#192753</color>
+    <color name="surfaceCard">#1E2644</color>
+    <color name="chipBackground">#263356</color>
+    <color name="textPrimary">#F7F8FF</color>
+    <color name="textSecondary">#B7C3FF</color>
+    <color name="status_safe">#4CAF50</color>
+    <color name="status_suspicious">#FFC107</color>
+    <color name="status_danger">#F44336</color>
+    <color name="dividerMuted">#334266</color>
+</resources>
